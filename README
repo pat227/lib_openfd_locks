@@ -1,0 +1,6 @@
+This small code base aims to provide file locks associated with open file descriptors,
+not processes. Open file descriptors have been available using fcntl within the recent
+past and in more recent versions of the linux kernel. Locks associated with file descriptors
+provide a long-desired and improved locking semantic across unrelated processes
+and even across threads within the same process. Ocaml's Ctypes proves invaluable here
+to make the system kernel calls required to acquire and release the locks.
