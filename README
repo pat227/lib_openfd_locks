@@ -1,6 +1,1 @@
-This small code base aims to provide file locks associated with open file descriptors,
-not processes. Open file descriptors have been available using fcntl within the recent
-past and in more recent versions of the linux kernel. Locks associated with file descriptors
-provide a long-desired and improved locking semantic across unrelated processes
-and even across threads within the same process. Ocaml's Ctypes proves invaluable here
-to make the system kernel calls required to acquire and release the locks.
+This small code base aims to provide calls to the newer file locking associated with open file descriptors, not processes, in a shared library. Open file descriptors have been available using fcntl within the recent past and in more recent versions of the linux kernel. Locks associated with file descriptors provide a long-desired and improved locking semantic across unrelated processes and even across threads within the same process. I wrote this code intending to use it elsewhere with Ocaml's Ctypes. Ocaml's Unix module does not yet, to my knowledge, provide open file descriptor locks.
