@@ -7,7 +7,7 @@ int main(int argc, char** args){
   }
   printf("\nTesting shared library linkage, ctypes, and open fd locks.");
   char* s = args[1];
-  truncate (*s, 0);
+  truncate(s, 0);
   char buf[256];
   //open needs s not *s, yet bad form gets past compiler even with -Wall -Wextra
   //(possible -Werror?) while complaining about fcntl which works!
